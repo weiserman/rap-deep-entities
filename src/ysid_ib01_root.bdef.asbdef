@@ -1,0 +1,14 @@
+unmanaged implementation in class zbp_sid_ib01_root unique;
+//strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ysid_ib01_root
+lock master
+authorization master ( instance )
+
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) r;
+  action validate deep parameter ysid_ib01_request deep result [0..1] ysid_ib01_response;
+}

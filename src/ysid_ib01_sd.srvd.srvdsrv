@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service for Ysid_ib01'
+define service Ysid_ib01_sd {
+  expose ysid_ib01_root;
+}
